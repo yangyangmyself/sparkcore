@@ -20,7 +20,7 @@ import org.apache.spark.sql.SaveMode
  * 
  * useage:
  * $>./spark-submit --class com.sunshine.scala.analysis.DaysNightoutObject SparkScalaTrackAnalysis-1.0.jar 
- * hdfs://bigdata1:8020/oy/data/hn/201606/hn_veh_passrec_20160621-30.txt yarn 5g 4g file:/opt/
+ * hdfs://bigdata1:8020/oy/data/hn/201606/hn_veh_passrec_20160621-30.txt yarn 5g 4g
  * 
  * 
  * Save analysis result data to mysql:
@@ -79,7 +79,6 @@ private[analysis] object DaysNightoutByFile {
     if(args.length > 1) _master = args(1)
     if(args.length > 2) _driverMemory = args(2)
     if(args.length > 3) _executorMemory = args(3)
-    if(args.length > 4) _outFile = args(4)
     
     val paras = Array(_master, _driverMemory, _executorMemory)
     
